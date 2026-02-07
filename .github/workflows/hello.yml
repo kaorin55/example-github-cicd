@@ -1,13 +1,8 @@
 name: Hello
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-
+on: push
 jobs:
-  hello:
+  log:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - run: echo "Hello, world"
+      - uses: actions/checkout@v4
